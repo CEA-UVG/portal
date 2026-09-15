@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>CEA-UVG | Centro de Estudios Ambientales</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: #24342f;
+      background: #f7f8f5;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #ffffff;
+      border-bottom: 1px solid #e1e5df;
+      padding: 20px 6%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    .logo span {
+      display: block;
+      font-size: 0.75rem;
+      font-weight: normal;
+      letter-spacing: 0;
+      margin-top: 2px;
+    }
+
+    nav a {
+      margin-left: 25px;
+      text-decoration: none;
+      color: #34453f;
+      font-size: 0.95rem;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .hero {
+      min-height: 560px;
+      display: flex;
+      align-items: center;
+      padding: 80px 8%;
+      background:
+        linear-gradient(
+          rgba(28, 54, 48, 0.72),
+          rgba(28, 54, 48, 0.72)
+        ),
+        url("https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&w=1800&q=80")
+        center/cover;
+      color: white;
+    }
+
+    .hero-content {
+      max-width: 760px;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.5rem, 6vw, 5rem);
+      line-height: 1.05;
+      margin-bottom: 25px;
+    }
+
+    .hero p {
+      font-size: 1.25rem;
+      max-width: 650px;
+      opacity: 0.95;
+    }
+
+    .hero-label {
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-size: 0.8rem;
+      margin-bottom: 18px;
+    }
+
+    .section {
+      padding: 75px 8%;
+      max-width: 1300px;
+      margin: auto;
+    }
+
+    .section h2 {
+      font-size: 2.2rem;
+      margin-bottom: 15px;
+    }
+
+    .intro {
+      max-width: 760px;
+      color: #596761;
+      margin-bottom: 40px;
+    }
+
+    .featured {
+      background: white;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      margin-top: 35px;
+    }
+
+    .featured-image {
+      min-height: 350px;
+      background:
+        url("https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1200&q=80")
+        center/cover;
+    }
+
+    .featured-text {
+      padding: 45px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .featured-text h3 {
+      font-size: 2rem;
+      margin-bottom: 15px;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 25px;
+      padding: 12px 22px;
+      background: #315f52;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      width: fit-content;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+      margin-top: 35px;
+    }
+
+    .card {
+      background: white;
+      padding: 32px;
+      border-radius: 12px;
+      border: 1px solid #e1e5df;
+    }
+
+    .card .icon {
+      font-size: 2rem;
+      margin-bottom: 15px;
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+      font-size: 1.3rem;
+    }
+
+    .card p {
+      color: #65716c;
+    }
+
+    footer {
+      background: #24342f;
+      color: white;
+      padding: 40px 8%;
+      margin-top: 40px;
+    }
+
+    footer p {
+      opacity: 0.8;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 800px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+      }
+
+      nav a {
+        margin-left: 0;
+        margin-right: 18px;
+      }
+
+      .featured {
+        grid-template-columns: 1fr;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        min-height: 500px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">
+      CEA-UVG
+      <span>Centro de Estudios Ambientales</span>
+    </div>
+
+    <nav>
+      <a href="#proyectos">Proyectos</a>
+      <a href="#monitoreo">Monitoreo</a>
+      <a href="#datos">Datos</a>
+      <a href="#recursos">Recursos</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-label">Investigación ambiental · Guatemala</div>
+
+      <h1>
+        Datos, ecosistemas y conocimiento para comprender nuestro entorno.
+      </h1>
+
+      <p>
+        Portal digital de proyectos, monitoreo, datos y productos científicos
+        del Centro de Estudios Ambientales de la Universidad del Valle de Guatemala.
+      </p>
+    </div>
+  </section>
+
+  <section class="section" id="monitoreo">
+
+    <h2>Monitoreo del Lago Atitlán</h2>
+
+    <p class="intro">
+      Información ambiental de largo plazo para comprender los cambios
+      ecológicos del lago y apoyar la investigación y la gestión de sus
+      ecosistemas.
+    </p>
+
+    <div class="featured">
+
+      <div class="featured-image"></div>
+
+      <div class="featured-text">
+
+        <h3>Una mirada de largo plazo al lago</h3>
+
+        <p>
+          Datos de monitoreo ambiental recopilados durante más de una década,
+          incluyendo variables de calidad del agua, nutrientes y comunidades
+          acuáticas.
+        </p>
+
+        <a class="button" href="#datos">
+          Explorar datos
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <section class="section" id="proyectos">
+
+    <h2>Investigación y proyectos</h2>
+
+    <p class="intro">
+      Investigación aplicada que conecta biodiversidad, agua, restauración
+      socioecológica, conocimiento ecológico tradicional y participación
+      comunitaria.
+    </p>
+
+    <div class="cards">
+
+      <div class="card">
+        <div class="icon">🌊</div>
+        <h3>Agua y ecosistemas</h3>
+        <p>
+          Monitoreo, calidad del agua y procesos ecológicos en sistemas
+          acuáticos de Guatemala.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">🌿</div>
+        <h3>Restauración socioecológica</h3>
+        <p>
+          Investigación y acciones de restauración que integran procesos
+          ecológicos y conocimiento local.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">👥</div>
+        <h3>Ciencia y comunidades</h3>
+        <p>
+          Proyectos que conectan investigación científica, participación
+          comunitaria y conocimiento ecológico tradicional.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <section class="section" id="datos">
+
+    <h2>Datos y visualizaciones</h2>
+
+    <p class="intro">
+      Próximamente: exploradores interactivos de datos, series temporales,
+      mapas y visualizaciones de los proyectos del CEA-UVG.
+    </p>
+
+  </section>
+
+  <section class="section" id="recursos">
+
+    <h2>Publicaciones y recursos</h2>
+
+    <p class="intro">
+      Artículos científicos, informes técnicos, protocolos, conjuntos de
+      datos y materiales complementarios asociados a la investigación del CEA.
+    </p>
+
+  </section>
+
+  <footer>
+
+    <strong>CEA-UVG</strong>
+
+    <p>
+      Centro de Estudios Ambientales · Universidad del Valle de Guatemala
+    </p>
+
+  </footer>
+
+</body>
+</html>
